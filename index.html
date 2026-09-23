@@ -1,0 +1,1105 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>Martinez Consulting Co</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15130F;
+    --panel:#1E1A15;
+    --panel-2:#262019;
+    --gold:#C79A44;
+    --gold-bright:#E3BC6C;
+    --cream:#EFE6D3;
+    --steel:#948A78;
+    --line: rgba(199,154,68,0.22);
+    --line-soft: rgba(239,230,211,0.08);
+    --white:#FFFFFF;
+    --maxw: 1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--cream);
+    font-family:'Public Sans', Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:600;
+    color:var(--white);
+    text-wrap:balance;
+    margin:0;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', 'Courier New', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+  }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+  }
+  section{ scroll-margin-top: 96px; }
+
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--gold-bright);
+    outline-offset:3px;
+  }
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(21,19,15,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:16px 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+  }
+  .brand-mark{
+    width:38px;height:38px;flex-shrink:0;
+  }
+  .brand-name{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:18px;
+    color:var(--white);
+    letter-spacing:0.01em;
+  }
+  .brand-name span{ color:var(--gold); }
+  .nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+    margin:0;padding:0;
+  }
+  .nav-links a{
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--cream);
+    padding:6px 2px;
+    border-bottom:2px solid transparent;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .nav-links a:hover{ color:var(--gold-bright); border-color:var(--gold-bright); }
+  .nav-cta{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--gold);
+    color:#1A1509;
+    font-weight:700;
+    font-size:13.5px;
+    padding:10px 18px;
+    border-radius:3px;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:background .15s ease;
+  }
+  .nav-cta:hover{ background:var(--gold-bright); }
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:1px solid var(--line);
+    border-radius:4px;
+    width:40px;height:40px;
+    color:var(--cream);
+    font-size:18px;
+    cursor:pointer;
+  }
+  .nav-mobile-panel{ display:none; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:88px 0 72px;
+    border-bottom:1px solid var(--line-soft);
+    background:
+      radial-gradient(1100px 480px at 82% -10%, rgba(199,154,68,0.10), transparent 60%),
+      var(--ink);
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(34px, 4.6vw, 54px);
+    line-height:1.08;
+    margin:18px 0 22px;
+  }
+  .hero-value{
+    font-size:18px;
+    color:var(--cream);
+    max-width:52ch;
+    margin-bottom:30px;
+  }
+  .hero-value strong{ color:var(--white); font-weight:600; }
+  .hero-ctas{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .btn-primary{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--gold);
+    color:#1A1509;
+    font-weight:700;
+    font-size:15.5px;
+    padding:15px 26px;
+    border-radius:3px;
+    text-decoration:none;
+    border:1px solid var(--gold);
+    transition: background .15s ease, transform .1s ease;
+  }
+  .btn-primary:hover{ background:var(--gold-bright); border-color:var(--gold-bright); }
+  .btn-secondary{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--cream);
+    font-weight:600;
+    font-size:14.5px;
+    text-decoration:none;
+    border-bottom:1px solid var(--line);
+    padding-bottom:2px;
+  }
+  .btn-secondary:hover{ color:var(--gold-bright); border-color:var(--gold-bright); }
+
+  .hero-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:30px 30px 26px;
+    position:relative;
+  }
+  .hero-card::before{
+    content:"";
+    position:absolute;
+    top:0;left:24px;right:24px;
+    height:1px;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .hero-card-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--steel);
+    margin-bottom:16px;
+  }
+  .hero-quote{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:22px;
+    line-height:1.4;
+    color:var(--white);
+    margin-bottom:16px;
+  }
+  .hero-quote-attrib{
+    font-size:13.5px;
+    color:var(--steel);
+    font-weight:600;
+  }
+
+  /* ---------- Stat strip ---------- */
+  .stats{
+    border-bottom:1px solid var(--line-soft);
+    background:var(--panel);
+  }
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:34px 0;
+  }
+  .stat{
+    padding:0 24px;
+    border-left:1px solid var(--line-soft);
+  }
+  .stat:first-child{ border-left:none; padding-left:0; }
+  .stat-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:600;
+    font-size:30px;
+    color:var(--gold-bright);
+    display:block;
+    margin-bottom:6px;
+  }
+  .stat-label{
+    font-size:13.5px;
+    color:var(--steel);
+  }
+
+  /* ---------- Section heading pattern ---------- */
+  .section{ padding:84px 0; }
+  .section-head{
+    max-width:640px;
+    margin-bottom:48px;
+  }
+  .section-head .eyebrow{ margin-bottom:12px; display:block; }
+  .section-head h2{
+    font-size:clamp(26px,3vw,36px);
+    margin-bottom:14px;
+  }
+  .section-head p{
+    color:var(--steel);
+    font-size:16px;
+    max-width:56ch;
+  }
+
+  /* ---------- Pricing ---------- */
+  .pricing-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:26px;
+    margin-bottom:28px;
+  }
+  .price-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:34px 32px;
+    display:flex;
+    flex-direction:column;
+  }
+  .price-card.featured{
+    border-color:var(--gold);
+    background:linear-gradient(180deg, rgba(199,154,68,0.08), var(--panel) 40%);
+  }
+  .price-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+    background:rgba(199,154,68,0.12);
+    border:1px solid var(--line);
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:3px;
+    margin-bottom:18px;
+    width:fit-content;
+  }
+  .price-card h3{
+    font-size:22px;
+    margin-bottom:6px;
+  }
+  .price-amount{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:600;
+    font-size:32px;
+    color:var(--white);
+    margin:10px 0 4px;
+  }
+  .price-amount span{
+    font-size:15px;
+    color:var(--steel);
+    font-weight:500;
+    margin-left:4px;
+  }
+  .price-note{
+    font-size:13.5px;
+    color:var(--steel);
+    margin-bottom:22px;
+  }
+  .price-list{
+    list-style:none;
+    margin:0 0 26px;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:11px;
+    flex:1;
+  }
+  .price-list li{
+    font-size:15px;
+    color:var(--cream);
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+  }
+  .price-list li svg{ flex-shrink:0; margin-top:4px; }
+  .btn-card{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    background:transparent;
+    color:var(--gold-bright);
+    font-weight:700;
+    font-size:14.5px;
+    padding:13px 20px;
+    border-radius:3px;
+    border:1px solid var(--gold);
+    text-decoration:none;
+    transition: background .15s ease, color .15s ease;
+  }
+  .btn-card:hover{ background:var(--gold); color:#1A1509; }
+  .stripe-note{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--steel);
+    text-align:center;
+    margin-top:10px;
+    letter-spacing:.02em;
+  }
+  .price-card.featured .btn-card{
+    background:var(--gold);
+    color:#1A1509;
+  }
+  .price-card.featured .btn-card:hover{ background:var(--gold-bright); }
+
+  .founding-note{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:var(--panel-2);
+    border:1px dashed var(--line);
+    border-radius:6px;
+    padding:18px 22px;
+    font-size:14.5px;
+    color:var(--cream);
+    margin-bottom:18px;
+  }
+  .founding-note .mono{ color:var(--gold-bright); }
+
+  .invoice-strip{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    background:var(--panel);
+    border:1px solid var(--line-soft);
+    border-radius:6px;
+    padding:20px 26px;
+    flex-wrap:wrap;
+  }
+  .invoice-strip-text h4{
+    font-family:'Public Sans',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    color:var(--white);
+    margin:0 0 4px;
+  }
+  .invoice-strip-text p{
+    margin:0;
+    font-size:13.5px;
+    color:var(--steel);
+  }
+  .btn-ghost{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:transparent;
+    color:var(--steel);
+    border:1px solid var(--line);
+    font-weight:600;
+    font-size:14px;
+    padding:11px 18px;
+    border-radius:3px;
+    text-decoration:none;
+    cursor:not-allowed;
+    white-space:nowrap;
+  }
+
+  /* ---------- How it works ---------- */
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .step{
+    background:var(--panel);
+    border:1px solid var(--line-soft);
+    border-radius:6px;
+    padding:28px 26px;
+  }
+  .step-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--gold);
+    font-weight:600;
+    letter-spacing:.06em;
+    margin-bottom:14px;
+  }
+  .step h3{
+    font-size:18.5px;
+    margin-bottom:10px;
+  }
+  .step p{
+    color:var(--steel);
+    font-size:14.5px;
+    margin:0;
+  }
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:56px;
+    align-items:start;
+  }
+  .about-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:34px 28px;
+    text-align:center;
+  }
+  .monogram{
+    width:104px;height:104px;
+    margin:0 auto 20px;
+  }
+  .about-card .name{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:21px;
+    color:var(--white);
+    margin-bottom:4px;
+  }
+  .about-card .role{
+    font-size:13.5px;
+    color:var(--steel);
+    margin-bottom:20px;
+  }
+  .about-card-stats{
+    display:flex;
+    justify-content:center;
+    gap:26px;
+    border-top:1px solid var(--line-soft);
+    padding-top:18px;
+  }
+  .about-card-stats div{ text-align:center; }
+  .about-card-stats .mono{
+    display:block;
+    font-size:20px;
+    color:var(--gold-bright);
+    font-weight:600;
+  }
+  .about-card-stats span.lbl{
+    font-size:12px;
+    color:var(--steel);
+  }
+  .about-body p{
+    font-size:16px;
+    color:var(--cream);
+    margin:0 0 20px;
+  }
+  .about-body .lede{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:21px;
+    color:var(--white);
+    line-height:1.45;
+    margin-bottom:26px;
+  }
+  .philosophy-tags{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:8px;
+  }
+  .philosophy-tags span{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+    color:var(--gold);
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    padding:7px 12px;
+    border-radius:3px;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:56px;
+  }
+  .contact-info-list{
+    list-style:none;
+    margin:0 0 30px;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+  .contact-info-list li{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+  }
+  .contact-icon{
+    width:38px;height:38px;
+    border-radius:50%;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .contact-info-list a, .contact-info-list span.val{
+    font-weight:600;
+    color:var(--white);
+    text-decoration:none;
+    font-size:15.5px;
+  }
+  .contact-info-list a:hover{ color:var(--gold-bright); }
+  .contact-info-list .lbl{
+    display:block;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--steel);
+    margin-bottom:3px;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .contact-note{
+    font-size:14px;
+    color:var(--steel);
+    border-left:2px solid var(--line);
+    padding-left:16px;
+  }
+
+  form.contact-form{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:30px;
+  }
+  .form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-bottom:18px;
+  }
+  .field{ display:flex; flex-direction:column; gap:8px; margin-bottom:18px; }
+  .field label{
+    font-size:13px;
+    font-weight:600;
+    color:var(--cream);
+  }
+  .field input, .field textarea{
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:12px 14px;
+    color:var(--white);
+    font-family:'Public Sans',sans-serif;
+    font-size:14.5px;
+  }
+  .field input::placeholder, .field textarea::placeholder{ color:var(--steel); }
+  .field textarea{ resize:vertical; min-height:100px; }
+  .form-submit{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    background:var(--gold);
+    color:#1A1509;
+    font-weight:700;
+    font-size:15px;
+    padding:14px 22px;
+    border-radius:3px;
+    border:none;
+    cursor:pointer;
+    width:100%;
+    transition:background .15s ease;
+  }
+  .form-submit:hover{ background:var(--gold-bright); }
+  .form-status{
+    font-size:13px;
+    color:var(--gold-bright);
+    margin-top:12px;
+    min-height:16px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line-soft);
+    padding:44px 0 34px;
+    background:var(--panel);
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:30px;
+    flex-wrap:wrap;
+  }
+  .footer-brand{
+    max-width:320px;
+  }
+  .footer-brand .brand{ margin-bottom:12px; }
+  .footer-brand p{
+    font-size:13.5px;
+    color:var(--steel);
+    margin:0;
+  }
+  .footer-cols{
+    display:flex;
+    gap:56px;
+    flex-wrap:wrap;
+  }
+  .footer-col h5{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--steel);
+    margin:0 0 14px;
+  }
+  .footer-col ul{
+    list-style:none;
+    margin:0;padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .footer-col a{
+    font-size:14px;
+    color:var(--cream);
+    text-decoration:none;
+  }
+  .footer-col a:hover{ color:var(--gold-bright); }
+  .footer-bottom{
+    margin-top:40px;
+    padding-top:24px;
+    border-top:1px solid var(--line-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    font-size:12.5px;
+    color:var(--steel);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px){
+    .hero-inner{ grid-template-columns:1fr; }
+    .about-grid{ grid-template-columns:1fr; }
+    .about-card{ max-width:320px; margin:0 auto; }
+    .contact-grid{ grid-template-columns:1fr; }
+    .stats-grid{ grid-template-columns:repeat(2,1fr); row-gap:26px; }
+    .stat:nth-child(3){ border-left:none; padding-left:0; }
+    .pricing-grid{ grid-template-columns:1fr; }
+    .steps{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 720px){
+    .nav-links{ display:none; }
+    .nav-cta{ display:none; }
+    .nav-toggle{ display:flex; align-items:center; justify-content:center; }
+    .nav-mobile-panel.open{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      padding:8px 28px 18px;
+      border-bottom:1px solid var(--line-soft);
+    }
+    .nav-mobile-panel a{
+      padding:12px 0;
+      color:var(--cream);
+      text-decoration:none;
+      font-weight:600;
+      font-size:15px;
+      border-bottom:1px solid var(--line-soft);
+    }
+    .nav-mobile-panel .nav-cta{
+      display:inline-flex;
+      margin-top:12px;
+      width:fit-content;
+    }
+    .form-row{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 560px){
+    .hero{ padding:56px 0 48px; }
+    .section{ padding:60px 0; }
+    .stats-grid{ grid-template-columns:1fr 1fr; }
+    .invoice-strip{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <svg class="brand-mark" viewBox="0 0 44 44" fill="none">
+          <circle cx="22" cy="22" r="20.5" fill="#1E1A15" stroke="#C79A44" stroke-width="1.6"/>
+          <text x="22" y="29" text-anchor="middle" font-family="Fraunces, serif" font-size="21" font-weight="600" fill="#E3BC6C">M</text>
+        </svg>
+        <span class="brand-name">Martinez <span>Consulting</span> Co</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services &amp; Pricing</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Get Your Free Audit</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1H18" stroke="#EFE6D3" stroke-width="1.6"/><path d="M0 7H18" stroke="#EFE6D3" stroke-width="1.6"/><path d="M0 13H18" stroke="#EFE6D3" stroke-width="1.6"/></svg>
+      </button>
+    </div>
+    <div class="nav-mobile-panel" id="navMobilePanel">
+      <a href="#services">Services &amp; Pricing</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Get Your Free Audit</a>
+    </div>
+  </nav>
+
+  <div id="top"></div>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">Martinez Consulting Co — San Diego, CA</span>
+        <h1>Run by an operator, not an agency.</h1>
+        <p class="hero-value">You shouldn't have time for managing Instagram and chasing down Yelp reviews. <strong>That's the whole business model here</strong> — I handle it with the same weekly discipline I used to run restaurant floors, not a marketing calendar I picked up from a course.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">Get Your Free Online Presence Audit →</a>
+          <a href="#services" class="btn-secondary">See pricing</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-label">Founder's Note</div>
+        <div class="hero-quote">"I bring the same weekly discipline to your social presence that I brought to a twenty-million-dollar P&amp;L."</div>
+        <div class="hero-quote-attrib">— Manny Martinez, Founder</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= STATS ================= -->
+  <div class="stats">
+    <div class="wrap stats-grid">
+      <div class="stat">
+        <span class="stat-num">39</span>
+        <span class="stat-label">Years in hospitality</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">14</span>
+        <span class="stat-label">Restaurants operated</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">$750<span style="font-size:16px;color:var(--steel);">/mo</span></span>
+        <span class="stat-label">Starting engagement</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">0</span>
+        <span class="stat-label">Generic, copy-pasted posts</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SERVICES & PRICING ================= -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Services &amp; Pricing</span>
+        <h2>Two ways to work together.</h2>
+        <p>Pricing sized for an independent restaurant, not an enterprise marketing budget. No long-term contract traps — founding clients keep their rate for the life of the engagement.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <span class="price-tag">Core Service</span>
+          <h3>Social Media &amp; Review Management</h3>
+          <div class="price-amount mono">$750<span>/ month</span></div>
+          <div class="price-note">Founding-client pricing locked for the life of the engagement.</div>
+          <ul class="price-list">
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8.5L6 12L14 3.5" stroke="#C79A44" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Ongoing content creation, sized to your menu and your regulars</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8.5L6 12L14 3.5" stroke="#C79A44" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Scheduled posting across your active platforms</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8.5L6 12L14 3.5" stroke="#C79A44" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Google, Yelp &amp; Facebook review responses, in your voice</li>
+          </ul>
+          <a href="https://buy.stripe.com/8x28wHgSg8vVfN7eUqcIE00" class="btn-card" target="_blank" rel="noopener">Get Started — Subscribe $750/mo</a>
+          <div class="stripe-note">Secure checkout by Stripe · cancel anytime</div>
+        </div>
+
+        <div class="price-card featured">
+          <span class="price-tag">Full Build</span>
+          <h3>Full Digital Management</h3>
+          <div class="price-amount mono">$1,500–$3,000<span>one-time</span></div>
+          <div class="price-note">Plus recurring management fee once the site is live.</div>
+          <ul class="price-list">
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8.5L6 12L14 3.5" stroke="#C79A44" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Everything in Social &amp; Review Management</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8.5L6 12L14 3.5" stroke="#C79A44" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> Full website build, hosted and maintained for you</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8.5L6 12L14 3.5" stroke="#C79A44" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg> One point of contact for your entire online presence</li>
+          </ul>
+          <a href="#contact" class="btn-card">Get Started</a>
+        </div>
+      </div>
+
+      <div class="founding-note">
+        <svg width="20" height="20" viewBox="0 0 20 20" style="flex-shrink:0"><circle cx="10" cy="10" r="9" fill="none" stroke="#C79A44" stroke-width="1.4"/><path d="M10 6V10.5L13 12.5" stroke="#C79A44" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
+        <span>Founding-client free audit: the <span class="mono">first two</span> audit clients pay nothing. Every client after that gets a paid diagnostic ($197) before any proposal — applies toward your first month if you sign.</span>
+      </div>
+
+      <div class="invoice-strip">
+        <div class="invoice-strip-text">
+          <h4>Existing Clients</h4>
+          <p>Pay your invoice online — secure payment link coming soon.</p>
+        </div>
+        <a href="#" class="btn-ghost" aria-disabled="true" onclick="event.preventDefault();">Pay Your Invoice →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="section" id="how-it-works" style="background:var(--panel);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How It Works</span>
+        <h2>Three steps. No mystery.</h2>
+        <p>The same process whether you're a two-table taco shop or a full-service dining room.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01 / FREE AUDIT</div>
+          <h3>I look at what you've got.</h3>
+          <p>Your profiles, your reviews, your posting habits — and I tell you straight what's working and what isn't. No jargon, no upsell pressure.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02 / PROPOSAL</div>
+          <h3>A plan sized to your restaurant.</h3>
+          <p>Not a package pulled off a shelf. What you need, what it costs, and what you'll get back for it.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03 / ONGOING MANAGEMENT</div>
+          <h3>Weekly discipline, every week.</h3>
+          <p>Content, posting, and review responses on a set cadence, plus a monthly report you can actually read.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-card">
+        <svg class="monogram" viewBox="0 0 104 104" fill="none">
+          <circle cx="52" cy="52" r="49" fill="#262019" stroke="#C79A44" stroke-width="2"/>
+          <text x="52" y="66" text-anchor="middle" font-family="Fraunces, serif" font-size="46" font-weight="600" fill="#E3BC6C">M</text>
+        </svg>
+        <div class="name">Manny Martinez</div>
+        <div class="role">Founder, Martinez Consulting Co</div>
+        <div class="about-card-stats">
+          <div><span class="mono">39</span><span class="lbl">Years</span></div>
+          <div><span class="mono">14</span><span class="lbl">Restaurants</span></div>
+        </div>
+      </div>
+      <div class="about-body">
+        <span class="eyebrow" style="display:block;margin-bottom:14px;">About / Founder Story</span>
+        <p class="lede">Consistency beats cleverness. Speed beats perfection.</p>
+        <p>I spent 39 years in hospitality before I ever touched a content calendar — on the floor, in the kitchen, and in the back office running P&amp;Ls for fourteen different restaurants. I know what it looks like when a dining room is actually working, and I know what it costs an owner when the small things — a slow reply to a bad review, a dead Instagram, a menu photo nobody's updated in two years — get pushed to the bottom of the list because service, staffing, and suppliers come first. They always will. That's the job.</p>
+        <p>Martinez Consulting Co exists to take that one thing off your plate and run it the way I ran everything else: on a schedule, with a plan, and with someone who actually answers the phone. Not agency jargon. Not a template with your logo pasted on it. Restaurant-floor knowledge applied to your online presence.</p>
+        <div class="philosophy-tags">
+          <span>OPERATOR FIRST</span>
+          <span>MARKETER SECOND</span>
+          <span>NO GENERIC POSTS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section" id="contact" style="background:var(--panel);border-top:1px solid var(--line-soft);">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow" style="display:block;margin-bottom:14px;">Contact</span>
+        <h2 style="font-size:clamp(24px,3vw,32px);margin-bottom:16px;">Tell me about your restaurant.</h2>
+        <p style="color:var(--steel);font-size:15.5px;margin-bottom:28px;max-width:44ch;">First two audit clients get it free. Everyone else, I'll quote you a straight number before we start.</p>
+        <ul class="contact-info-list">
+          <li>
+            <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.5 3.5H14.5V12.5H1.5V3.5Z" stroke="#C79A44" stroke-width="1.3"/><path d="M2 4L8 9L14 4" stroke="#C79A44" stroke-width="1.3"/></svg></div>
+            <div><span class="lbl">Email</span><a href="mailto:manny@martinezconsultingco.com">manny@martinezconsultingco.com</a></div>
+          </li>
+          <li>
+            <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 2.5C2 2 2.5 1.5 3 1.5H5C5.5 1.5 5.7 2 5.8 2.3L6.5 4.2C6.6 4.6 6.5 5 6.2 5.2L5 6.2C5.7 8 7.5 9.8 9.3 10.5L10.3 9.3C10.5 9 10.9 8.9 11.3 9L13.2 9.7C13.5 9.8 14 10 14 10.5V12.5C14 13 13.5 13.5 13 13.5C7 13.7 2.3 9 2 3C2 2.8 2 2.6 2 2.5Z" stroke="#C79A44" stroke-width="1.2" fill="none"/></svg></div>
+            <div><span class="lbl">Phone</span><a href="tel:+16199624218">(619) 962-4218</a></div>
+          </li>
+          <li>
+            <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="1.5" width="13" height="13" rx="4" stroke="#C79A44" stroke-width="1.3"/><circle cx="8" cy="8" r="3.2" stroke="#C79A44" stroke-width="1.3"/><circle cx="11.6" cy="4.4" r="0.9" fill="#C79A44"/></svg></div>
+            <div><span class="lbl">Instagram</span><a href="https://instagram.com/martinez_consulting_co" target="_blank" rel="noopener">@martinez_consulting_co</a></div>
+          </li>
+        </ul>
+        <p class="contact-note">Martinez Consulting Co is a DBA of Martinez Hospitality Group LLC, based in San Diego, CA.</p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="fname">Your name</label>
+            <input type="text" id="fname" name="fname" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="frestaurant">Restaurant name</label>
+            <input type="text" id="frestaurant" name="frestaurant" placeholder="Your restaurant" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="femail">Email</label>
+          <input type="email" id="femail" name="femail" placeholder="you@yourrestaurant.com" required>
+        </div>
+        <div class="field">
+          <label for="fmessage">What's going on with your social media or reviews?</label>
+          <textarea id="fmessage" name="fmessage" placeholder="Tell me a little about what you need help with."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send &amp; Request Free Audit</button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#top" class="brand">
+            <svg class="brand-mark" viewBox="0 0 44 44" fill="none">
+              <circle cx="22" cy="22" r="20.5" fill="#15130F" stroke="#C79A44" stroke-width="1.6"/>
+              <text x="22" y="29" text-anchor="middle" font-family="Fraunces, serif" font-size="21" font-weight="600" fill="#E3BC6C">M</text>
+            </svg>
+            <span class="brand-name">Martinez <span>Consulting</span> Co</span>
+          </a>
+          <p>Social media &amp; review management for independent San Diego restaurants, run by a 39-year hospitality operator.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h5>Site</h5>
+            <ul>
+              <li><a href="#services">Services &amp; Pricing</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="mailto:manny@martinezconsultingco.com">manny@martinezconsultingco.com</a></li>
+              <li><a href="tel:+16199624218">(619) 962-4218</a></li>
+              <li><a href="https://instagram.com/martinez_consulting_co" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Clients</h5>
+            <ul>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Martinez Consulting Co, a DBA of Martinez Hospitality Group LLC.</span>
+        <span>Also building <a href="https://adamdining.com" target="_blank" style="color:var(--gold);text-decoration:none;">ADAM</a> — restaurant intelligence software for independent operators.</span>
+        <span>San Diego, CA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    var toggle = document.getElementById('navToggle');
+    var panel = document.getElementById('navMobilePanel');
+    toggle.addEventListener('click', function(){
+      var isOpen = panel.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    panel.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        panel.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      });
+    });
+
+    var form = document.getElementById('contactForm');
+    var status = document.getElementById('formStatus');
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var btn = form.querySelector('.form-submit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      var payload = {
+        name: document.getElementById('fname').value.trim(),
+        restaurant: document.getElementById('frestaurant').value.trim(),
+        email: document.getElementById('femail').value.trim(),
+        message: document.getElementById('fmessage').value.trim()
+      };
+
+      // Formspree
+      try {
+        var res = await fetch('https://formspree.io/f/xdekgzog', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (res.ok) {
+          status.textContent = "Message received — Manny will be in touch shortly.";
+          form.reset();
+          btn.textContent = 'Message Sent';
+          btn.style.background = 'rgba(199,154,68,0.25)';
+          btn.style.color = 'var(--gold-bright)';
+        } else {
+          status.textContent = "Something went wrong. Please email manny@martinezconsultingco.com directly.";
+          btn.textContent = 'Send & Request Free Audit';
+          btn.disabled = false;
+        }
+      } catch(err) {
+        status.textContent = "Could not send. Please email manny@martinezconsultingco.com directly.";
+        btn.textContent = 'Send & Request Free Audit';
+        btn.disabled = false;
+      }
+
+      // HubSpot (fire and forget)
+      try {
+        var hsFields = Object.keys(payload).map(function(k){ return {name:k, value:payload[k]}; });
+        fetch('https://api.hsforms.com/submissions/v3/integration/submit/246384964/05d9d0d0-88e3-4ca9-a002-44bc03df5b8c', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ fields: hsFields, context: { pageUri: window.location.href, pageName: 'Martinez Consulting Co' } })
+        });
+      } catch(e) { console.error('HubSpot error:', e); }
+    });
+  </script>
+
+
+</body></html>
