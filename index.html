@@ -770,7 +770,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="#contact" class="nav-cta">Get Your Free Audit</a>
+      <a href="#contact" class="nav-cta">Get Your Free Review</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1H18" stroke="#F0ECDA" stroke-width="1.6"/><path d="M0 7H18" stroke="#F0ECDA" stroke-width="1.6"/><path d="M0 13H18" stroke="#F0ECDA" stroke-width="1.6"/></svg>
       </button>
@@ -780,7 +780,7 @@
       <a href="#how-it-works">How It Works</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="#contact" class="nav-cta">Get Your Free Audit</a>
+      <a href="#contact" class="nav-cta">Get Your Free Review</a>
     </div>
   </nav>
 
@@ -794,7 +794,7 @@
         <h1>Run by an operator, not an agency.</h1>
         <p class="hero-value">You shouldn't have time for managing Instagram and chasing down Yelp reviews. <strong>That's the whole business model here</strong> — I handle it with the same weekly discipline I used to run restaurant floors, not a marketing calendar I picked up from a course.</p>
         <div class="hero-ctas">
-          <a href="#contact" class="btn-primary">Get Your Free Online Presence Audit →</a>
+          <a href="#contact" class="btn-primary">Get Your Free Online Presence Review →</a>
           <a href="#services" class="btn-secondary">See pricing</a>
         </div>
       </div>
@@ -868,7 +868,7 @@
 
       <div class="founding-note">
         <svg width="20" height="20" viewBox="0 0 20 20" style="flex-shrink:0"><circle cx="10" cy="10" r="9" fill="none" stroke="#C9A84C" stroke-width="1.4"/><path d="M10 6V10.5L13 12.5" stroke="#C9A84C" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>
-        <span>Founding-client free audit: the <span class="mono">first two</span> audit clients pay nothing. Every client after that gets a paid diagnostic ($197) before any proposal — applies toward your first month if you sign.</span>
+        <span>Every inquiry gets a free <strong>Online Presence Review</strong>: your reviews, profiles and posting, in a short written report within 3 business days. Want me to see it as a guest? The <strong>In-Person Guest Experience Audit</strong> is $197, credited toward your first month if you sign.</span>
       </div>
 
       <div class="invoice-strip">
@@ -891,9 +891,9 @@
       </div>
       <div class="steps">
         <div class="step">
-          <div class="step-num">01 / FREE AUDIT</div>
+          <div class="step-num">01 / FREE REVIEW</div>
           <h3>I look at what you've got.</h3>
-          <p>Your profiles, your reviews, your posting habits — and I tell you straight what's working and what isn't. No jargon, no upsell pressure.</p>
+          <p>Your profiles, your reviews, your posting habits — and I tell you straight what's working and what isn't, in a short written review within 3 business days. No jargon, no upsell pressure.</p>
         </div>
         <div class="step">
           <div class="step-num">02 / PROPOSAL</div>
@@ -944,7 +944,7 @@
       <div>
         <span class="eyebrow" style="display:block;margin-bottom:14px;">Contact</span>
         <h2 style="font-size:clamp(24px,3vw,32px);margin-bottom:16px;">Tell me about your restaurant.</h2>
-        <p style="color:var(--steel);font-size:15.5px;margin-bottom:28px;max-width:44ch;">First two audit clients get it free. Everyone else, I'll quote you a straight number before we start.</p>
+        <p style="color:var(--steel);font-size:15.5px;margin-bottom:28px;max-width:44ch;">Every inquiry gets a free Online Presence Review. I reply within one business day.</p>
         <ul class="contact-info-list">
           <li>
             <div class="contact-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.5 3.5H14.5V12.5H1.5V3.5Z" stroke="#C9A84C" stroke-width="1.3"/><path d="M2 4L8 9L14 4" stroke="#C9A84C" stroke-width="1.3"/></svg></div>
@@ -973,15 +973,21 @@
             <input type="text" id="frestaurant" name="frestaurant" placeholder="Your restaurant" required>
           </div>
         </div>
-        <div class="field">
-          <label for="femail">Email</label>
-          <input type="email" id="femail" name="femail" placeholder="you@yourrestaurant.com" required>
+        <div class="form-row">
+          <div class="field">
+            <label for="femail">Email</label>
+            <input type="email" id="femail" name="femail" placeholder="you@yourrestaurant.com" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="fphone">Phone <span style="color:var(--steel);font-weight:400;">(optional — fastest way to reach you)</span></label>
+            <input type="tel" id="fphone" name="fphone" placeholder="Best number to reach you" autocomplete="tel">
+          </div>
         </div>
         <div class="field">
           <label for="fmessage">What's going on with your social media or reviews?</label>
           <textarea id="fmessage" name="fmessage" placeholder="Tell me a little about what you need help with."></textarea>
         </div>
-        <button type="submit" class="form-submit">Send &amp; Request Free Audit</button>
+        <button type="submit" class="form-submit">Send &amp; Request Free Review</button>
         <div class="form-status" id="formStatus"></div>
       </form>
     </div>
@@ -1063,6 +1069,7 @@
         name: document.getElementById('fname').value.trim(),
         restaurant: document.getElementById('frestaurant').value.trim(),
         email: document.getElementById('femail').value.trim(),
+        phone: document.getElementById('fphone').value.trim(),
         message: document.getElementById('fmessage').value.trim()
       };
 
@@ -1072,8 +1079,11 @@
         { name: 'firstname', value: payload.name },
         { name: 'company',   value: payload.restaurant },
         { name: 'email',     value: payload.email },
+        { name: 'phone',     value: payload.phone },
         { name: 'message',   value: payload.message }
       ];
+      // Skip empty optional fields (phone, message) so HubSpot doesn't reject blanks
+      hsFields = hsFields.filter(function(f){ return f.value !== ''; });
       try {
         var res = await fetch('https://api.hsforms.com/submissions/v3/integration/submit/246384964/05d9d0d0-88e3-4ca9-a002-44bc03df5b8c', {
           method: 'POST',
@@ -1081,7 +1091,7 @@
           body: JSON.stringify({ fields: hsFields, context: { pageUri: window.location.href, pageName: 'Martinez Consulting Co' } })
         });
         if (res.ok) {
-          status.textContent = "Message received — Manny will be in touch shortly.";
+          status.textContent = "Message received — Manny will reply within one business day.";
           form.reset();
           btn.textContent = 'Message Sent';
           btn.style.background = 'rgba(201,168,76,0.25)';
@@ -1089,12 +1099,12 @@
         } else {
           console.error('HubSpot error:', res.status, await res.text());
           status.textContent = "Something went wrong. Please email manny@martinezconsultingco.com directly.";
-          btn.textContent = 'Send & Request Free Audit';
+          btn.textContent = 'Send & Request Free Review';
           btn.disabled = false;
         }
       } catch(err) {
         status.textContent = "Could not send. Please email manny@martinezconsultingco.com directly.";
-        btn.textContent = 'Send & Request Free Audit';
+        btn.textContent = 'Send & Request Free Review';
         btn.disabled = false;
       }
     });
